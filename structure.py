@@ -121,7 +121,7 @@ else:
 
 
 # This function will run with a Griptape Agent, who will automatically emit events.
-run_example_with_griptape_agent(input, event_driver)
+run_example_with_no_griptape_agent(input, event_driver)
 
 # Un-comment this example to run a program that manually generates events, without
 # relying on a Griptape Agent.
