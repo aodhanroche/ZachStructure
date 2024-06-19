@@ -109,7 +109,9 @@ if is_running_in_managed_environment():
     # provided to you in the environment variable GT_CLOUD_BASE_URL. You can
     # override this value by specifying your own for
     # GriptapeCloudEventListenerDriver.base_url .
-    event_driver = GriptapeCloudEventListenerDriver(api_key=get_listener_api_key())
+    base_url = os.environ["GT_CLOUD_BASE_URL"]
+    print(base_url)
+    event_driver = GriptapeCloudEventListenerDriver(base_url=base_url, api_key=get_listener_api_key())
 else:
     # If running completely local, such as within an IDE, load environment vars.
     # This is done automatically for you when the Structure is run within the
